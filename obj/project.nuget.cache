@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1sDovX4opSDwfCp6taaYSg26D5t/7BJPqNQXMkz1UIIEbL2jU5/DihDiQrbJeakvIBQPibGgL0ynMA9bLwHMxg==",
+  "dgSpecHash": "3W5NRGBIXhBZp4u1CSQjoxD5281DJc8jUJMmvcaMQ8Z78Mftk9pwUxVvNOVnPi4LOsGICJ8f7I3tam7zQygJpQ==",
   "success": true,
   "projectFilePath": "F:\\info\\my-c-sharp\\maui\\MyTasks\\MyTasks\\MyTasks.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ManU_LP\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\ManU_LP\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\ManU_LP\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\ManU_LP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

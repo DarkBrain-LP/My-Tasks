@@ -4,5 +4,23 @@
         <name>MyTasks</name>
     </assembly>
     <members>
+        <member name="P:MyTasks.ViewModels.MainViewModel.Items">
+            <inheritdoc cref="F:MyTasks.ViewModels.MainViewModel.items"/>
+        </member>
+        <member name="P:MyTasks.ViewModels.MainViewModel.Text">
+            <inheritdoc cref="F:MyTasks.ViewModels.MainViewModel.text"/>
+        </member>
+        <member name="F:MyTasks.ViewModels.MainViewModel.addCommand">
+            <summary>The backing field for <see cref="P:MyTasks.ViewModels.MainViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:MyTasks.ViewModels.MainViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MyTasks.ViewModels.MainViewModel.Add"/>.</summary>
+        </member>
+        <member name="F:MyTasks.ViewModels.MainViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:MyTasks.ViewModels.MainViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:MyTasks.ViewModels.MainViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MyTasks.ViewModels.MainViewModel.Delete(System.String)"/>.</summary>
+        </member>
     </members>
 </doc>

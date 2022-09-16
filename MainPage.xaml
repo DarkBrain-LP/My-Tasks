@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyTasks.MainPage">
+             x:Class="MyTasks.MainPage"
+             xmlns:viewmodel="clr-namespace:MyTasks.ViewModels"
+             x:DataType="viewmodel:MainViewModel">
 
     <Grid RowDefinitions="100, Auto, *"
           ColumnDefinitions=".75*, .25*"
           Padding="10"
-          RowSpacing="10"
+          RowSpacing="50"
           ColumnSpacing="10">
 
         <Image Grid.ColumnSpan="2"
@@ -21,36 +23,33 @@
                    ZIndex="1"/>
         </Frame>-->
 
-        <StackLayout Grid.Row="1" Margin="0" Padding="0">
-            <Entry Text="Enter A Task"
-                        FontSize="14"
-                        FontAttributes="Bold" />
+        <StackLayout Grid.Row="1" Margin="0">
+            <Entry Placeholder="Enter A Task"
+                   Text ="{Binding Text}"
+                    FontSize="14"
+                    FontAttributes="Bold" />
             <BoxView Color="Gray"
                     HeightRequest="1"
                     HorizontalOptions="Fill" />
         </StackLayout>
 
         <Button Text="Add"
+                Command="{Binding AddCommand}"
                 Grid.Row="1"
                 Grid.Column="1"/>
 
-        <CollectionView Grid.Row="2" Grid.ColumnSpan="2">
-            <CollectionView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Let's Help</x:String>
-                    <x:String>Oevenement</x:String>
-                    <x:String>Miabe School Web Site</x:String>
-                    <x:String>Best Ayimolou</x:String>
-                </x:Array>
-            </CollectionView.ItemsSource>
+        <CollectionView Grid.Row="2" Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Items}">
 
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}">
                     <SwipeView>
                         <SwipeView.RightItems>
                             <SwipeItems>
                                 <SwipeItem Text="Delete"
-                                           BackgroundColor="Red"/>
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=DeleteCommand}"
+                                           CommandParameter="{Binding .}"/>
                             </SwipeItems>
                         </SwipeView.RightItems>
                         <Grid Padding="0.5">

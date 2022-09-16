@@ -955,3 +955,5 @@ F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\lp\151\jl\files
 F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\lp\153\jl\files.cache
 F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\lp\155\jl\files.cache
 F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\resizetizer\r\drawable\logo.png
+F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\android\assets\CommunityToolkit.Mvvm.dll
+F:\info\my-c-sharp\maui\MyTasks\MyTasks\obj\Debug\net6.0-android\android\assets\CommunityToolkit.Mvvm.pdb
