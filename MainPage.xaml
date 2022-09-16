@@ -3,6 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyTasks.MainPage">
 
-    
+    <Grid RowDefinitions="100, Auto, *"
+          ColumnDefinitions=".75*, .25*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+
+        <Image Grid.ColumnSpan="2"
+               Source="logo.png"
+               BackgroundColor="Transparent"/>
+
+        <!--<Frame Grid.Row="1"
+               HeightRequest="50"
+               >
+            <Entry Placeholder="Enter a Task"
+                   PlaceholderColor="Green"
+                   ZIndex="1"/>
+        </Frame>-->
+
+        <StackLayout Grid.Row="1" Margin="0" Padding="0">
+            <Entry Text="Enter A Task"
+                        FontSize="14"
+                        FontAttributes="Bold" />
+            <BoxView Color="Gray"
+                    HeightRequest="1"
+                    HorizontalOptions="Fill" />
+        </StackLayout>
+
+        <Button Text="Add"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+        <CollectionView Grid.Row="2" Grid.ColumnSpan="2">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Let's Help</x:String>
+                    <x:String>Oevenement</x:String>
+                    <x:String>Miabe School Web Site</x:String>
+                    <x:String>Best Ayimolou</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"/>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="0.5">
+                            <Frame>
+                                <Label Text="{Binding .}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 
 </ContentPage>
